@@ -18,6 +18,15 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: black;
+}
+
 img,
 picture,
 video,
@@ -55,3 +64,89 @@ h5,
 h6 {
 	text-wrap: balance;
 }
+
+html,
+body {
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+/* --------------- */
+/* Layout			 */
+/* --------------- */
+
+.home {
+	display: grid;
+	grid-template-areas:
+		'header header'
+		'main .'
+		'footer footer';
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 1fr 60px;
+}
+@media (min-width: 768px) {
+	.home {
+		display: grid;
+		grid-template-areas:
+			'header header'
+			'nav main'
+			'footer footer';
+		grid-template-columns: 300px 1fr;
+		grid-template-rows: 60px 1fr 60px;
+	}
+}
+nav {
+	background-color: green;
+	grid-area: nav;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+@media (max-width: 768px) {
+	nav {
+		background-color: green;
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		right: 0;
+		inset: 0 0 0 50%;
+		gap: 1rem;
+		padding: 2rem;
+	}
+}
+
+header {
+	grid-area: 'header';
+	background-color: red;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 2rem;
+	height: 60px;
+}
+
+main {
+	grid-area: main;
+	background-color: blue;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+footer {
+	background-color: bisque;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+
+/* --------------- */
+/*   Components    */
+/* --------------- */
