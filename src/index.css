@@ -68,7 +68,7 @@ h6 {
 html,
 body {
 	height: 100vh;
-	overflow-y: hidden;
+	overflow-y: clip;
 }
 
 /* --------------- */
@@ -101,7 +101,15 @@ nav {
 	width: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
+	main {
+		display: grid;
+		grid-template-areas: 'hero-text hero-picture' 'content content';
+		grid-template-rows: 100px 100px;
+		grid-template-columns: 100px 100px;
+
+		padding: 12px;
+	}
 	.home {
 		display: grid;
 		grid-template-areas:
@@ -113,13 +121,14 @@ nav {
 	}
 	.social {
 		background-color: white;
-		border-right: 1px solid gray;
+		border-right: 1px solid rgba(128, 128, 128, 0.337);
 		width: 100%;
 		height: 100%;
 		grid-area: social;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 1rem;
 		padding-top: 8px;
 	}
 
@@ -129,6 +138,12 @@ nav {
 }
 
 @media (max-width: 768px) {
+	main {
+		display: grid;
+		grid-template-areas: 'hero-text' 'hero-picture' 'content';
+		grid-template-rows: repeat(3, '1fr');
+		grid-template-columns: 1fr;
+	}
 	nav {
 		background-color: green;
 		position: fixed;
@@ -158,8 +173,9 @@ nav {
 }
 
 header {
-	grid-area: 'header';
-	background-color: red;
+	grid-area: header;
+	background-color: white;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.337);
 	display: flex;
 	flex-direction: row;
 	position: fixed;
@@ -173,12 +189,45 @@ header {
 
 main {
 	grid-area: main;
-	display: grid;
-	grid-template-areas: 'hero-text' 'picture' 'content';
-	background: linear-gradient();
-	height: 100vh;
-	overflow-y: scroll;
+	height: calc(100vh - 120px);
+	overflow: auto;
+
+	background: hsla(287, 23%, 65%, 1);
+
+	background: linear-gradient(
+		330deg,
+		hsla(287, 23%, 65%, 1) 0%,
+		hsla(23, 64%, 75%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		330deg,
+		hsla(287, 23%, 65%, 1) 0%,
+		hsla(23, 64%, 75%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		330deg,
+		hsla(287, 23%, 65%, 1) 0%,
+		hsla(23, 64%, 75%, 1) 100%
+	);
+
 	padding: 12px;
+}
+
+.hero-text {
+	grid-area: hero-text;
+	background-color: red;
+}
+
+.content {
+	grid-area: content;
+	background-color: greenyellow;
+}
+
+.hero-picture {
+	grid-area: hero-picture;
+	background-color: yellow;
 }
 
 footer {
