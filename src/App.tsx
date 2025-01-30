@@ -37,8 +37,15 @@ const App = () => {
 				</a>
 			</div>
 			<main>
-				<div className="hero-text">hero-text</div>
-				<div className="hero-picture">picture</div>
+				<div className="hero-text">
+					<div className="hero-title">
+						<p>Title</p>
+					</div>
+					<div className="hero-subtitle">subtitle</div>
+				</div>
+				<div className="hero-picture">
+					<img src="src\assets\images\programmer.png" alt="" />
+				</div>
 				<div className="content">
 					content Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Libero excepturi eius quidem rerum voluptates, eveniet labore modi

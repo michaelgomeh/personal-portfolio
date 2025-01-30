@@ -16,6 +16,18 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	font-family: 'Noto Sans', serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+p {
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 24px;
 }
 
 a {
@@ -80,7 +92,7 @@ body {
 }
 
 nav {
-	background-color: green;
+	background-color: white;
 	grid-area: nav;
 	display: flex;
 	flex-direction: row;
@@ -105,8 +117,8 @@ nav {
 	main {
 		display: grid;
 		grid-template-areas: 'hero-text hero-picture' 'content content';
-		grid-template-rows: 100px 100px;
-		grid-template-columns: 100px 100px;
+		grid-template-rows: minmax(400px, 40vh, 800px) 1fr;
+		grid-template-columns: 1fr 1fr;
 
 		padding: 12px;
 	}
@@ -140,7 +152,7 @@ nav {
 @media (max-width: 768px) {
 	main {
 		display: grid;
-		grid-template-areas: 'hero-text' 'hero-picture' 'content';
+		grid-template-areas: 'hero-picture' 'hero-text' 'content';
 		grid-template-rows: repeat(3, '1fr');
 		grid-template-columns: 1fr;
 	}
@@ -227,7 +239,12 @@ main {
 
 .hero-picture {
 	grid-area: hero-picture;
-	background-color: yellow;
+}
+
+.hero-title {
+	font-size: ;
+}
+.hero-subtitle {
 }
 
 footer {
