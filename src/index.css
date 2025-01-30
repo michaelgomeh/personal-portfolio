@@ -4,6 +4,7 @@
 
 :root {
 	--page-height: calc(100vh - 90px);
+	--border-style: 1px solid rgba(128, 128, 128, 0.4);
 }
 
 *,
@@ -110,15 +111,26 @@ nav {
 	width: 0;
 }
 
+.hero {
+	display: flex;
+	flex-direction: column;
+	margin: 5vw;
+	height: var(--page-height);
+}
+
 @media (min-width: 400px) {
 	main {
-		display: grid;
+		/* display: grid;
 		grid-template-areas: 'hero-text hero-picture' 'content content';
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: 1fr 1fr;
-
+		grid-template-rows: var(--page-height) 1fr;
+		grid-template-columns: 1fr 1fr; */
 		padding: 12px;
 	}
+
+	.hero {
+		flex-direction: row;
+	}
+
 	.home {
 		display: grid;
 		grid-template-areas:
@@ -128,9 +140,10 @@ nav {
 		grid-template-columns: 40px 1fr;
 		grid-template-rows: 60px 1fr 30px;
 	}
+
 	.social {
 		background-color: white;
-		border-right: 1px solid rgba(128, 128, 128, 0.337);
+		border-right: var(--border-style);
 		width: 100%;
 		height: 100%;
 		grid-area: social;
@@ -144,15 +157,14 @@ nav {
 	.social * {
 		width: 24px;
 	}
+
+	.hero-picture {
+		max-width: 600px;
+		border: 1px solid red;
+	}
 }
 
-@media (max-width: 768px) {
-	main {
-		display: grid;
-		grid-template-areas: 'hero-picture' 'hero-text' 'content';
-		grid-template-rows: repeat(3, '1fr');
-		grid-template-columns: 1fr;
-	}
+@media (max-width: 400px) {
 	nav {
 		position: fixed;
 		display: flex;
@@ -173,6 +185,10 @@ nav {
 		z-index: 1000;
 		background: url('./assets/svgs/x.svg');
 	}
+
+	.hero-picture {
+		max-width: 300px;
+	}
 }
 
 .drawerToggle {
@@ -183,7 +199,7 @@ nav {
 header {
 	grid-area: header;
 	background-color: white;
-	border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+	border-bottom: var(--border-style);
 	display: flex;
 	flex-direction: row;
 	position: fixed;
@@ -234,27 +250,30 @@ main {
 
 .content {
 	grid-area: content;
-	background-color: greenyellow;
+	scroll-snap-align: start;
 }
 
 .hero-picture {
-	max-width: 500px;
 	grid-area: hero-picture;
 	margin: auto;
+	scroll-snap-align: center;
 }
 
 .hero-title {
-	font-size: 8vw;
+	font-size: clamp(4rem, 8vw, 100rem);
 }
+
 .hero-subtitle {
-	font-size: 3vw;
+	font-size: clamp(1rem, 5vw, 4rem);
 }
 .hero-description {
+	text-align: center;
+	font-weight: 300;
 }
 
 footer {
-	background-color: bisque;
 	position: fixed;
+	border-top: var(--border-style);
 	bottom: 0;
 	width: 100%;
 	height: 30px;

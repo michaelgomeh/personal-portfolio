@@ -37,13 +37,17 @@ const App = () => {
 				</a>
 			</div>
 			<main>
-				<div className="hero-text">
-					<h1 className="hero-title">Hi,</h1>
-					<h2 className="hero-subtitle">I'm Michael</h2>
-					<h3 className="hero-description">subtitle</h3>
-				</div>
-				<div className="hero-picture">
-					<img src="src\assets\images\programmer.png" alt="" />
+				<div className="hero">
+					<div className="hero-text">
+						<h1 className="hero-title">Hi,</h1>
+						<h2 className="hero-subtitle">I'm Michael</h2>
+						<h3 className="hero-description">
+							I build frontend from design to production
+						</h3>
+					</div>
+					<div className="hero-picture">
+						<img src="src\assets\images\programmer.png" alt="" />
+					</div>
 				</div>
 				<div className="content">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
