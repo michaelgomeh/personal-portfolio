@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import {
 	IconBrandCss3,
+	IconBrandGithub,
 	IconBrandGithubFilled,
+	IconBrandLinkedin,
 	IconBrandLinkedinFilled,
 	IconWorldWww,
 } from '@tabler/icons-react';
+import ProjectCard from './components/ProjectCard';
 const App = () => {
 	const [drawerOpen, setDrawerOpen] = useState(false);
 	return (
@@ -23,24 +26,44 @@ const App = () => {
 				</nav>
 			</header>
 			<div className="social">
-				<a href="" target="_blank">
-					<IconBrandGithubFilled strokeWidth={1} />
-				</a>
-				<a href="" target="_blank">
-					<IconBrandLinkedinFilled strokeWidth={1} />
-				</a>
-				<a href="" target="_blank">
-					<IconWorldWww strokeWidth={1} />
-				</a>
-				<a href="https://uiverse.io/profile/michaelgomeh" target="_blank">
-					<IconBrandCss3 strokeWidth={1} />
-				</a>
+				<div className="social-label">
+					<a href="" target="_blank">
+						<div>
+							<IconBrandGithub strokeWidth={1} />
+						</div>
+						<p>Github</p>
+					</a>
+				</div>
+				<div className="social-label">
+					<a href="" target="_blank">
+						<div>
+							<IconBrandLinkedin strokeWidth={1} />
+						</div>
+						<p>Linkedin</p>
+					</a>
+				</div>
+				<div className="social-label">
+					<a href="www.michaelgomeh.com" target="_blank">
+						<div>
+							<IconWorldWww strokeWidth={1} />
+						</div>{' '}
+						<p>Website</p>
+					</a>
+				</div>{' '}
+				<div className="social-label">
+					<a href="https://uiverse.io/profile/michaelgomeh" target="_blank">
+						<div>
+							<IconBrandCss3 strokeWidth={1} />
+						</div>
+						<p>Uiverse.io</p>
+					</a>
+				</div>
 			</div>
 			<main>
 				<div className="hero">
 					<div className="hero-text">
 						<h1 className="hero-title">Hi,</h1>
-						<h2 className="hero-subtitle">I'm Michael</h2>
+						<h2 className="hero-subtitle">I'm Mike</h2>
 						<h3 className="hero-description">
 							I build frontend from design to production
 						</h3>
@@ -50,12 +73,37 @@ const App = () => {
 					</div>
 					<div className="mouse-icon-wrapper">
 						<div className="mouse-icon">
-							{' '}
 							<div className="mouse-icon-inside"></div>
 						</div>
 					</div>
 				</div>
 				<div className="content">
+					<div className="projects-container">
+						<ProjectCard
+							title={'Project1'}
+							description={
+								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							}
+							stack={'React, ts'}
+							url={'undefined'}
+						/>
+						<ProjectCard
+							title={'Project1'}
+							description={
+								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							}
+							stack={'React, ts'}
+							url={'undefined'}
+						/>
+						<ProjectCard
+							title={'Project1'}
+							description={
+								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							}
+							stack={'React, ts'}
+							url={'undefined'}
+						/>
+					</div>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
 					similique consectetur eum veritatis hic. Nulla eaque vel mollitia
 					tempore iusto accusamus ipsam, iste commodi sapiente animi enim non
@@ -77,11 +125,11 @@ const App = () => {
 					voluptas nostrum dolorem, at iure tempore nesciunt blanditiis sequi
 					reprehenderit dolore labore tempora aliquid vitae, ut autem neque ex.
 					A eum quaerat, optio doloribus iste magnam reiciendis, unde rerum ex,
-					distinctio repellendus fugiat quis magni. Fuga maiores deleniti
+					distinctio repellxendus fugiat quis magni. Fuga maiores deleniti
 					nostrum tempora tenetur!
 				</div>
 			</main>
-			<footer>hi</footer>
+			{/* <footer>hi</footer> */}
 		</div>
 	);
 };
