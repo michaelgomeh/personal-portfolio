@@ -38,8 +38,8 @@ const App = () => {
 			</div>
 			<main>
 				<div className="hero-text">
-					<h1 className="hero-title">Hi, I'm Michael</h1>
-					<h2 className="hero-subtitle">subtitle</h2>
+					<h1 className="hero-title">Hi,</h1>
+					<h2 className="hero-subtitle">I'm Michael</h2>
 					<h3 className="hero-description">subtitle</h3>
 				</div>
 				<div className="hero-picture">

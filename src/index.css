@@ -2,6 +2,9 @@
 /*   CSS Reset By https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* --------------- */
 
+:root {
+}
+
 *,
 *::before,
 *::after {
@@ -11,7 +14,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 body {
@@ -110,7 +113,7 @@ nav {
 	main {
 		display: grid;
 		grid-template-areas: 'hero-text hero-picture' 'content content';
-		grid-template-rows: minmax(700px, 60vh, 1000px) 1fr;
+		grid-template-rows: 1fr 1fr;
 		grid-template-columns: 1fr 1fr;
 
 		padding: 12px;
@@ -150,7 +153,6 @@ nav {
 		grid-template-columns: 1fr;
 	}
 	nav {
-		background-color: green;
 		position: fixed;
 		display: flex;
 		flex-direction: column;
@@ -222,9 +224,11 @@ main {
 
 .hero-text {
 	grid-area: hero-text;
-	margin: 24px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	margin: auto;
 }
 
 .content {
@@ -233,12 +237,16 @@ main {
 }
 
 .hero-picture {
+	max-width: 500px;
 	grid-area: hero-picture;
+	margin: auto;
 }
 
 .hero-title {
+	font-size: 8vw;
 }
 .hero-subtitle {
+	font-size: 3vw;
 }
 .hero-description {
 }
