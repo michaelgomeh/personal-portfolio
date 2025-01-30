@@ -48,6 +48,12 @@ const App = () => {
 					<div className="hero-picture">
 						<img src="src\assets\images\programmer.png" alt="" />
 					</div>
+					<div className="mouse-icon-wrapper">
+						<div className="mouse-icon">
+							{' '}
+							<div className="mouse-icon-inside"></div>
+						</div>
+					</div>
 				</div>
 				<div className="content">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
