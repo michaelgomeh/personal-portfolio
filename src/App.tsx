@@ -2,9 +2,8 @@ import { useState } from 'react';
 import {
 	IconBrandCss3,
 	IconBrandGithub,
-	IconBrandGithubFilled,
 	IconBrandLinkedin,
-	IconBrandLinkedinFilled,
+	IconFileCv,
 	IconWorldWww,
 } from '@tabler/icons-react';
 import ProjectCard from './components/ProjectCard';
@@ -49,13 +48,21 @@ const App = () => {
 						</div>{' '}
 						<p>Website</p>
 					</a>
-				</div>{' '}
+				</div>
 				<div className="social-label">
 					<a href="https://uiverse.io/profile/michaelgomeh" target="_blank">
 						<div>
 							<IconBrandCss3 strokeWidth={1} />
 						</div>
 						<p>Uiverse.io</p>
+					</a>
+				</div>
+				<div className="social-label">
+					<a href="src\assets\files\Michael Gomeh CV.pdf" target="_blank">
+						<div>
+							<IconFileCv strokeWidth={1} />
+						</div>
+						<p>CV(PDF)</p>
 					</a>
 				</div>
 			</div>
@@ -77,56 +84,39 @@ const App = () => {
 						</div>
 					</div>
 				</div>
+				<div className="projects-container">
+					<ProjectCard
+						title={'Project1'}
+						description={
+							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+						}
+						stack={'React, ts'}
+						url={'undefined'}
+					/>
+					<ProjectCard
+						title={'Project1'}
+						description={
+							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+						}
+						stack={'React, ts'}
+						url={'undefined'}
+					/>
+					<ProjectCard
+						title={'Project1'}
+						description={
+							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+						}
+						stack={'React, ts'}
+						url={'undefined'}
+					/>
+				</div>
 				<div className="content">
-					<div className="projects-container">
-						<ProjectCard
-							title={'Project1'}
-							description={
-								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
-							}
-							stack={'React, ts'}
-							url={'undefined'}
-						/>
-						<ProjectCard
-							title={'Project1'}
-							description={
-								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
-							}
-							stack={'React, ts'}
-							url={'undefined'}
-						/>
-						<ProjectCard
-							title={'Project1'}
-							description={
-								'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
-							}
-							stack={'React, ts'}
-							url={'undefined'}
-						/>
-					</div>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-					similique consectetur eum veritatis hic. Nulla eaque vel mollitia
-					tempore iusto accusamus ipsam, iste commodi sapiente animi enim non
-					asperiores aut libero quas maxime repellendus esse eveniet? Laudantium
-					facere deleniti, saepe pariatur excepturi, eum possimus dolorem eos
-					doloremque illum nihil mollitia nam, autem a! Vel, maiores numquam sed
-					quas sapiente cumque accusamus perferendis voluptas voluptate dolorum
-					impedit, quaerat minima suscipit! Nulla voluptates libero facilis aut
-					sit illo iusto? Quod sint veritatis voluptatibus ad cum id neque ipsum
-					saepe eligendi, nihil dolorem iste sunt repellat repellendus
-					asperiores, optio impedit necessitatibus est, cupiditate tenetur
-					dignissimos molestias quas officiis. Ad rerum repellat qui quisquam
-					quis molestiae eveniet. Aliquid consequatur cumque ut accusamus
-					similique mollitia ipsa itaque, obcaecati, temporibus sequi possimus,
-					ipsum recusandae illum ad. Veritatis a mollitia tempore tenetur minus
-					nulla, quia aliquam soluta sint libero exercitationem quo eius
-					repellat assumenda enim voluptatibus laboriosam voluptatem excepturi!
-					Consectetur explicabo laborum perferendis praesentium incidunt quo
-					voluptas nostrum dolorem, at iure tempore nesciunt blanditiis sequi
-					reprehenderit dolore labore tempora aliquid vitae, ut autem neque ex.
-					A eum quaerat, optio doloribus iste magnam reiciendis, unde rerum ex,
-					distinctio repellxendus fugiat quis magni. Fuga maiores deleniti
-					nostrum tempora tenetur!
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum,
+					a velit commodi officia vero officiis ad, id itaque earum quis libero?
+					Voluptatum, adipisci quod quaerat ab dolorum nulla tempore laborum
+					odit quo illo eveniet libero ipsam amet perspiciatis, laudantium saepe
+					velit ipsa suscipit odio? Recusandae placeat magnam dolore libero
+					ratione.
 				</div>
 			</main>
 			{/* <footer>hi</footer> */}
