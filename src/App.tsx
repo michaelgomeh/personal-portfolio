@@ -88,7 +88,7 @@ const App = () => {
 						<div>
 							<IconFileCv strokeWidth={1} />
 						</div>
-						<p>CV(PDF)</p>
+						<p>CV</p>
 					</a>
 				</div>
 			</div>

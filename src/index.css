@@ -83,6 +83,7 @@ h4,
 h5,
 h6 {
 	overflow-wrap: break-word;
+	font-weight: 300;
 }
 
 p {
@@ -246,7 +247,7 @@ nav {
 	}
 
 	.social:hover {
-		width: 150px;
+		width: 200px;
 	}
 
 	.social-label {
@@ -255,6 +256,7 @@ nav {
 
 	.social .social-label a div {
 		flex-shrink: 0;
+		white-space: nowrap;
 	}
 	.social .social-label a {
 		flex-wrap: nowrap;
@@ -388,6 +390,7 @@ main > div {
 
 .hero-title {
 	font-size: clamp(4rem, 8vw, 100rem);
+	font-weight: 600;
 }
 
 .hero-subtitle {
@@ -395,7 +398,7 @@ main > div {
 	font-weight: 500;
 }
 .hero-description {
-	font-weight: 300;
+	font-weight: 400;
 	text-align: center;
 }
 
@@ -439,6 +442,7 @@ main > div {
 	border: var(--border-style);
 	backdrop-filter: var(--glass-blur);
 	transition: all 200ms ease-out;
+	max-height: 225px;
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.641);
 		box-shadow: none;
