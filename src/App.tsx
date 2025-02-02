@@ -19,14 +19,14 @@ const App = () => {
 					onClick={() => setDrawerOpen(!drawerOpen)}
 				></button>
 				<nav data-visible={drawerOpen}>
-					<a href="#">Home</a>
-					<a href="#">Projects</a>
-					<a href="#">Contant</a>
+					<a href="#hero">Home</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
 				</nav>
 			</header>
 			<div className="social">
 				<div className="social-label">
-					<a href="" target="_blank">
+					<a href="https://github.com/michaelgomeh/" target="_blank">
 						<div>
 							<IconBrandGithub strokeWidth={1} />
 						</div>
@@ -34,7 +34,7 @@ const App = () => {
 					</a>
 				</div>
 				<div className="social-label">
-					<a href="" target="_blank">
+					<a href="https://www.linkedin.com/in/michael-gomeh/" target="_blank">
 						<div>
 							<IconBrandLinkedin strokeWidth={1} />
 						</div>
@@ -67,7 +67,7 @@ const App = () => {
 				</div>
 			</div>
 			<main>
-				<div className="hero">
+				<div className="hero" id="hero">
 					<div className="hero-text">
 						<h1 className="hero-title">Hi,</h1>
 						<h2 className="hero-subtitle">I'm Mike</h2>
@@ -84,14 +84,14 @@ const App = () => {
 						</div>
 					</div>
 				</div>
-				<div className="projects-container">
+				<div className="projects-container" id="projects">
 					<ProjectCard
-						title={'Project1'}
+						title={'Eco op'}
 						description={
 							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
 						}
-						stack={['React, ts']}
-						url={'undefined'}
+						stack={['Nextjs, Typescript, MantineUI, Xata, Clerk Auth']}
+						url={'https://www.e-op.org/'}
 					/>
 					<ProjectCard
 						title={'Project1'}
@@ -102,15 +102,15 @@ const App = () => {
 						url={'undefined'}
 					/>
 					<ProjectCard
-						title={'Project1'}
+						title={'CSS Playground'}
 						description={
-							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							'A collection of reusable components and design experiments showcasing advanced CSS techniques.'
 						}
-						stack={['React, ts']}
-						url={'undefined'}
+						stack={['CSS']}
+						url={'https://github.com/michaelgomeh/CSS-Playground'}
 					/>
 				</div>
-				<div className="content">
+				<div className="contact" id="contact">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum,
 					a velit commodi officia vero officiis ad, id itaque earum quis libero?
 					Voluptatum, adipisci quod quaerat ab dolorum nulla tempore laborum
