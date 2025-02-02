@@ -96,7 +96,7 @@ const App = () => {
 				<div className="hero" id="hero">
 					<div className="hero-text">
 						<h1 className="hero-title">Hi,</h1>
-						<h2 className="hero-subtitle">I'm Mike</h2>
+						<h2 className="hero-subtitle">I'm Michael</h2>
 						<h3 className="hero-description">
 							I build frontend from design to production
 						</h3>
