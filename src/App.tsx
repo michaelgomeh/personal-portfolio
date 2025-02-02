@@ -9,19 +9,45 @@ import {
 import ProjectCard from './components/ProjectCard';
 const App = () => {
 	const [drawerOpen, setDrawerOpen] = useState(false);
+
 	return (
 		<div className="home">
 			<header>
-				My portfolio
+				<div>
+					<div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M5 7l5 5l-5 5" />
+							<path d="M13 17l6 0" />
+						</svg>
+					</div>
+					<p>Michael Gomeh</p>
+				</div>
 				<button
 					className="drawerToggle"
 					data-visible={drawerOpen}
 					onClick={() => setDrawerOpen(!drawerOpen)}
 				></button>
-				<nav data-visible={drawerOpen}>
-					<a href="#hero">Home</a>
-					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
+				<nav id="nav" data-visible={drawerOpen}>
+					<a onClick={() => setDrawerOpen(false)} href="#hero">
+						Home
+					</a>
+					<a onClick={() => setDrawerOpen(false)} href="#projects">
+						Projects
+					</a>
+					<a onClick={() => setDrawerOpen(false)} href="#contact">
+						Contact
+					</a>
 				</nav>
 			</header>
 			<div className="social">

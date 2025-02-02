@@ -5,8 +5,8 @@
 :root {
 	--page-height: calc(100vh - 60px);
 	--border-style: 1px solid rgba(255, 255, 255, 0.5);
-	--glass-bg: rgba(255, 255, 255, 0.6);
-	--glass-shadow: inset rgba(255, 255, 255, 0.4) -2px -2px 16px 0.5rem;
+	--glass-bg: rgba(255, 255, 255, 0.4);
+	--glass-shadow: inset rgba(255, 255, 255, 0.2) 0 0 4px 2px;
 	--purple: hsla(287, 23%, 65%, 1);
 }
 
@@ -254,6 +254,10 @@ nav {
 		transition: all 200ms ease;
 	}
 
+	.social > * {
+		transition: all 300ms ease-out;
+	}
+
 	.social > *:hover {
 		background-color: rgba(255, 255, 255, 0.5);
 	}
@@ -269,6 +273,8 @@ nav {
 
 @media (max-width: 400px) {
 	nav {
+		background-color: var(--glass-bg);
+		backdrop-filter: blur(10px);
 		position: fixed;
 		display: flex;
 		flex-direction: column;
@@ -277,6 +283,10 @@ nav {
 		gap: 1rem;
 		padding: 2rem;
 		transform: translateX(100%);
+		transition: all 200ms ease-in-out;
+		margin-top: 60px;
+		z-index: 100;
+		border: var(--border-style);
 	}
 
 	nav[data-visible='true'] {
@@ -286,6 +296,13 @@ nav {
 	.drawerToggle {
 		display: block;
 		z-index: 1000;
+		background: url('./assets/svgs/hamburger.svg');
+		width: 24px;
+		height: 24px;
+		transition: all 500ms ease;
+	}
+
+	.drawerToggle[data-visible='true'] {
 		background: url('./assets/svgs/x.svg');
 	}
 
@@ -315,8 +332,16 @@ header {
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	padding-inline: 2rem;
+	padding-inline: 1rem;
 	height: 60px;
+	z-index: 100;
+}
+
+header > div {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: nowrap;
 }
 
 main {
@@ -336,6 +361,7 @@ main > div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	z-index: 2;
 }
 
 .contact {
