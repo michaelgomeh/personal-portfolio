@@ -339,9 +339,6 @@ main > div {
 	scroll-snap-align: top;
 }
 
-.hero-picture {
-}
-
 .hero-title {
 	font-size: clamp(4rem, 8vw, 100rem);
 }

@@ -90,7 +90,7 @@ const App = () => {
 						description={
 							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
 						}
-						stack={'React, ts'}
+						stack={['React, ts']}
 						url={'undefined'}
 					/>
 					<ProjectCard
@@ -98,7 +98,7 @@ const App = () => {
 						description={
 							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
 						}
-						stack={'React, ts'}
+						stack={['React, ts']}
 						url={'undefined'}
 					/>
 					<ProjectCard
@@ -106,7 +106,7 @@ const App = () => {
 						description={
 							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
 						}
-						stack={'React, ts'}
+						stack={['React, ts']}
 						url={'undefined'}
 					/>
 				</div>
