@@ -42,7 +42,7 @@ const App = () => {
 					</a>
 				</div>
 				<div className="social-label">
-					<a href="www.michaelgomeh.com" target="_blank">
+					<a href="https://www.michaelgomeh.com" target="_blank">
 						<div>
 							<IconWorldWww strokeWidth={1} />
 						</div>{' '}
