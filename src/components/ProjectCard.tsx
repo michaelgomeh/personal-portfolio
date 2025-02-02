@@ -14,7 +14,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
 		<a className="card flex col center" href={url} target="_blank">
 			<div className="project-title">{title}</div>
 			<div className="project-description">{description}</div>
-			<div className="project-stack">{stack}</div>
+			<div className="project-stack">{stack.join(' | ')}</div>
 		</a>
 	);
 };

@@ -116,16 +116,16 @@ const App = () => {
 						description={
 							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
 						}
-						stack={['Nextjs, Typescript, MantineUI, Xata, Clerk Auth']}
+						stack={['Nextjs', 'Typescript', 'MantineUI', 'Xata', 'Clerk Auth']}
 						url={'https://www.e-op.org/'}
 					/>
 					<ProjectCard
-						title={'Project1'}
+						title={'Haiku - Notes App'}
 						description={
-							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							'An intuitive notes app to keep and share of your thoughts and ideas.'
 						}
-						stack={['React, ts']}
-						url={'undefined'}
+						stack={['React', 'Express', 'Typescript', 'MantineUI', 'Tailwind']}
+						url={'http://haiku-client.onrender.com'}
 					/>
 					<ProjectCard
 						title={'CSS Playground'}
