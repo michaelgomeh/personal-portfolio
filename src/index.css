@@ -4,9 +4,9 @@
 
 :root {
 	--page-height: calc(100vh - 60px);
-	--border-style: 1px solid rgba(255, 255, 255, 0.8);
+	--border-style: 1px solid rgba(255, 255, 255, 0.5);
 	--glass-bg: rgba(255, 255, 255, 0.6);
-
+	--glass-shadow: inset rgba(255, 255, 255, 0.4) -2px -2px 16px 0.5rem;
 	--purple: hsla(287, 23%, 65%, 1);
 }
 
@@ -131,6 +131,7 @@ nav {
 .social {
 	width: 0;
 	overflow: hidden;
+	backdrop-filter: blur(10px);
 }
 
 .hero {
@@ -215,6 +216,8 @@ nav {
 
 	.social {
 		background-color: var(--glass-bg);
+		box-shadow: var(--glass-shadow);
+
 		border-right: var(--border-style);
 		width: 40px;
 		height: 100%;
@@ -303,6 +306,7 @@ nav {
 header {
 	grid-area: header;
 	background-color: var(--glass-bg);
+	box-shadow: var(--glass-shadow);
 	border: var(--border-style);
 	display: flex;
 	flex-direction: row;
@@ -316,6 +320,7 @@ header {
 }
 
 main {
+	scroll-behavior: smooth;
 	grid-area: main;
 	height: var(--page-height);
 	overflow-y: scroll;
@@ -333,7 +338,7 @@ main > div {
 	align-items: center;
 }
 
-.content {
+.contact {
 	grid-area: content;
 	height: var(--page-height);
 	scroll-snap-align: top;
@@ -386,6 +391,7 @@ main > div {
 /* --------------- */
 
 .card {
+	box-shadow: var(--glass-shadow);
 	background-color: var(--glass-bg);
 	border-radius: 12px;
 	border: var(--border-style);
@@ -397,6 +403,7 @@ main > div {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	gap: 1rem;
 	height: var(--page-height);
+	padding: 2rem;
 }
 
 .project-description {
@@ -405,6 +412,7 @@ main > div {
 	border-bottom: var(--border-style);
 	padding: 0.6rem;
 	font-size: 0.8rem;
+	flex: 1;
 }
 
 .project-stack {
