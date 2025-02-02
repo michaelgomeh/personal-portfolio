@@ -8,6 +8,7 @@
 	--glass-bg: rgba(255, 255, 255, 0.4);
 	--glass-shadow: inset rgba(255, 255, 255, 0.2) 0 0 4px 2px;
 	--purple: hsla(287, 23%, 65%, 1);
+	--glass-blur: blur(10px);
 }
 
 *,
@@ -29,9 +30,7 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-
 	background: var(--purple);
-
 	background: linear-gradient(
 		330deg,
 		var(--purple) 0%,
@@ -104,12 +103,28 @@ body {
 	overflow-y: clip;
 }
 
+*::-webkit-scrollbar {
+	width: 8px;
+	border: var(--border-style);
+}
+
+*::-webkit-scrollbar-track {
+	background-color: var(--purple);
+	box-shadow: var(--glass-shadow);
+	border: var(--border-style);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--glass-bg);
+}
+
 /* --------------- */
 /* Layout			 */
 /* --------------- */
 
 .drawerToggle {
 	display: none;
+	cursor: pointer;
 }
 
 nav {
@@ -131,7 +146,7 @@ nav {
 .social {
 	width: 0;
 	overflow: hidden;
-	backdrop-filter: blur(10px);
+	backdrop-filter: var(--glass-blur);
 }
 
 .hero {
@@ -160,8 +175,8 @@ nav {
 	height: 50px;
 	width: 30px;
 	left: 50%;
-	border: 1px solid rgba(255, 255, 255, 0.6);
-	background-color: rgba(255, 255, 255, 0.2);
+	border: var(--border-style);
+	background-color: var(--glass-bg);
 	border-radius: 32px;
 }
 
@@ -274,7 +289,7 @@ nav {
 @media (max-width: 400px) {
 	nav {
 		background-color: var(--glass-bg);
-		backdrop-filter: blur(10px);
+		backdrop-filter: var(--glass-blur);
 		position: fixed;
 		display: flex;
 		flex-direction: column;
@@ -349,6 +364,7 @@ main {
 	grid-area: main;
 	height: var(--page-height);
 	overflow-y: scroll;
+	overflow-x: hidden;
 	scroll-snap-type: y mandatory;
 	padding: 12px;
 }
@@ -421,15 +437,21 @@ main > div {
 	background-color: var(--glass-bg);
 	border-radius: 12px;
 	border: var(--border-style);
-	backdrop-filter: blur(10px);
+	backdrop-filter: var(--glass-blur);
+	transition: all 200ms ease-out;
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.641);
+		box-shadow: none;
+		transform: scale(1.05);
+	}
 }
 
 .projects-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	gap: 1rem;
 	height: var(--page-height);
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .project-description {
@@ -444,7 +466,7 @@ main > div {
 .project-stack {
 	color: rgba(0, 0, 0, 0.5);
 	padding: 0.6rem;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 }
 
 .project-title {
