@@ -233,7 +233,6 @@ nav {
 	.social {
 		background-color: var(--glass-bg);
 		box-shadow: var(--glass-shadow);
-
 		border-right: var(--border-style);
 		width: 40px;
 		height: 100%;
@@ -451,8 +450,10 @@ main > div {
 }
 
 .projects-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+
 	gap: 1rem;
 	height: var(--page-height);
 	padding: 1rem;
