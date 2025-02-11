@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import {
 	IconBrandCss3,
 	IconBrandGithub,
@@ -8,8 +8,15 @@ import {
 	IconWorldWww,
 } from '@tabler/icons-react';
 import ProjectCard from './components/ProjectCard';
+import React from 'react';
+
 const App = () => {
 	const [drawerOpen, setDrawerOpen] = useState(false);
+
+	function alertContactInProgress(e: FormEvent) {
+		e.preventDefault();
+		alert('yet to be implemented');
+	}
 
 	return (
 		<div className="home">
@@ -146,10 +153,21 @@ const App = () => {
 					/>
 				</div>
 				<div className="contact" id="contact">
-					Contact form
+					<form onSubmit={alertContactInProgress}>
+						<fieldset>
+							<label htmlFor="email">
+								Email
+								<input name="email" type="text" id="email" />
+							</label>
+							<label htmlFor="content">
+								Content
+								<textarea rows={5} name="" id="content"></textarea>
+							</label>
+							<button type="submit">Submit</button>
+						</fieldset>
+					</form>
 				</div>
 			</main>
-			{/* <footer>hi</footer> */}
 		</div>
 	);
 };
