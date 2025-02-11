@@ -9,6 +9,7 @@
 	--glass-shadow: inset rgba(255, 255, 255, 0.2) 0 0 4px 2px;
 	--purple: hsla(287, 23%, 65%, 1);
 	--glass-blur: blur(10px);
+	--border-sm: 12px;
 }
 
 *,
@@ -437,7 +438,7 @@ main > div {
 .card {
 	box-shadow: var(--glass-shadow);
 	background-color: var(--glass-bg);
-	border-radius: 12px;
+	border-radius: var(--border-sm);
 	border: var(--border-style);
 	backdrop-filter: var(--glass-blur);
 	transition: all 200ms ease-out;
@@ -453,7 +454,6 @@ main > div {
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
-
 	gap: 1rem;
 	height: var(--page-height);
 	padding: 1rem;
@@ -478,4 +478,36 @@ main > div {
 	font-weight: 300;
 	padding: 0.6rem;
 	font-size: 0.8rem;
+}
+
+#contact {
+	width: 100%;
+	padding: 1rem;
+
+	form {
+		fieldset {
+			padding: 1rem;
+			display: flex;
+			gap: 1rem;
+			flex-direction: column;
+			padding: 1rem;
+			label {
+				font-weight: 300;
+				* {
+					font-weight: normal;
+					padding: 0.6rem;
+					margin-top: 0.5rem;
+					width: 100%;
+					border-radius: var(--border-sm);
+					background-color: whitesmoke;
+				}
+			}
+		}
+	}
+}
+
+button {
+	padding: 12px;
+	border: 1px solid black;
+	border-radius: var(--border-sm);
 }
