@@ -390,16 +390,18 @@ main > div {
 
 .hero-title {
 	font-size: clamp(4rem, 8vw, 100rem);
-	font-weight: 600;
+	font-weight: 900;
 }
 
 .hero-subtitle {
 	font-size: clamp(1rem, 5vw, 4rem);
-	font-weight: 500;
+	font-weight: 600;
+	line-height: 2;
 }
 .hero-description {
 	font-weight: 400;
 	text-align: center;
+	line-height: 1.5;
 }
 
 /* footer {
@@ -489,6 +491,9 @@ main > div {
 	padding: 1rem;
 
 	form {
+		height: 100%;
+		margin: auto;
+
 		fieldset {
 			border: 1px solid rgb(111, 111, 111);
 			border-radius: var(--border-sm);
@@ -508,12 +513,14 @@ main > div {
 					border-radius: var(--border-sm);
 					background-color: whitesmoke;
 					transition: all 300ms ease-out;
+					outline: none;
 				}
 				*:focus {
-					outline: none;
-					box-shadow: 0 0 0 3px var(--purple);
-					outline: none;
-					background-color: floralwhite;
+					box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+					background-color: white;
+				}
+				*:hover {
+					box-shadow: 0 0 0 2px black;
 				}
 			}
 		}
@@ -527,6 +534,7 @@ legend {
 
 button {
 	padding: 12px;
+	cursor: pointer;
 	border: 1px solid black;
 	border-radius: var(--border-sm);
 	transition: all 300ms ease-in-out;
@@ -534,6 +542,6 @@ button {
 
 button:hover {
 	background-color: rgb(233, 233, 233);
-	box-shadow: 0 0 0 3px white;
-	transform: scale(1.02);
+	box-shadow: 0 0 0 2px black;
+	transform: scale(1.01);
 }
