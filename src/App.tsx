@@ -3,6 +3,7 @@ import {
 	IconBrandCss3,
 	IconBrandGithub,
 	IconBrandLinkedin,
+	IconBrandLinktree,
 	IconFileCv,
 	IconWorldWww,
 } from '@tabler/icons-react';
@@ -84,6 +85,14 @@ const App = () => {
 					</a>
 				</div>
 				<div className="social-label">
+					<a href="https://linktr.ee/michaelgomeh" target="_blank">
+						<div>
+							<IconBrandLinktree strokeWidth={1} />
+						</div>
+						<p>Linktr.ee</p>
+					</a>
+				</div>
+				<div className="social-label">
 					<a href="src\assets\files\Michael Gomeh CV.pdf" target="_blank">
 						<div>
 							<IconFileCv strokeWidth={1} />
@@ -132,17 +141,12 @@ const App = () => {
 						description={
 							'A collection of reusable components and design experiments showcasing advanced CSS techniques.'
 						}
-						stack={['CSS']}
+						stack={['Pure CSS']}
 						url={'https://github.com/michaelgomeh/CSS-Playground'}
 					/>
 				</div>
 				<div className="contact" id="contact">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum,
-					a velit commodi officia vero officiis ad, id itaque earum quis libero?
-					Voluptatum, adipisci quod quaerat ab dolorum nulla tempore laborum
-					odit quo illo eveniet libero ipsam amet perspiciatis, laudantium saepe
-					velit ipsa suscipit odio? Recusandae placeat magnam dolore libero
-					ratione.
+					Contact form
 				</div>
 			</main>
 			{/* <footer>hi</footer> */}
