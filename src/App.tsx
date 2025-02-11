@@ -114,7 +114,7 @@ const App = () => {
 						<h1 className="hero-title">Hi,</h1>
 						<h2 className="hero-subtitle">I'm Michael</h2>
 						<h3 className="hero-description">
-							I build frontend from design to production
+							I build website from concept to production
 						</h3>
 					</div>
 					<div className="hero-picture">
