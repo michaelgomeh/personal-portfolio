@@ -130,7 +130,7 @@ const App = () => {
 					<ProjectCard
 						title={'Eco op'}
 						description={
-							'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique consectetur'
+							'A platform connecting biologists and researchers for collaboration and data sharing. Find partners, share insights, and accelerate scientific breakthroughs.'
 						}
 						stack={['Nextjs', 'Typescript', 'MantineUI', 'Xata', 'Clerk Auth']}
 						url={'https://www.e-op.org/'}

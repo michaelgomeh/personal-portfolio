@@ -206,7 +206,7 @@ nav {
 	}
 }
 
-@media (min-width: 400px) {
+@media (min-width: 768px) {
 	main {
 		padding: 12px;
 	}
@@ -279,9 +279,13 @@ nav {
 	nav a:hover {
 		color: white;
 	}
+
+	.projects-container {
+		flex-direction: row;
+	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 	nav {
 		background-color: var(--glass-bg);
 		backdrop-filter: var(--glass-blur);
@@ -322,6 +326,9 @@ nav {
 	}
 	.hero-picture {
 		max-width: 300px;
+	}
+	.projects-container {
+		flex-direction: column;
 	}
 }
 
@@ -445,7 +452,6 @@ main > div {
 
 .projects-container {
 	display: flex;
-	flex-direction: column;
 	overflow-y: scroll;
 	gap: 1rem;
 	height: var(--page-height);
@@ -453,6 +459,8 @@ main > div {
 }
 
 .project-description {
+	width: 100%;
+	text-align: center;
 	font-weight: 200;
 	border-top: var(--border-style);
 	border-bottom: var(--border-style);
