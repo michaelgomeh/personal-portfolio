@@ -155,6 +155,7 @@ const App = () => {
 				<div className="contact" id="contact">
 					<form onSubmit={alertContactInProgress}>
 						<fieldset>
+							<legend>Contact</legend>
 							<label htmlFor="email">
 								Email
 								<input name="email" type="text" id="email" />

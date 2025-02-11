@@ -8,6 +8,7 @@
 	--glass-bg: rgba(255, 255, 255, 0.4);
 	--glass-shadow: inset rgba(255, 255, 255, 0.2) 0 0 4px 2px;
 	--purple: hsla(287, 23%, 65%, 1);
+	--beige: hsla(23, 64%, 75%, 1);
 	--glass-blur: blur(10px);
 	--border-sm: 12px;
 }
@@ -32,22 +33,14 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	background: var(--purple);
-	background: linear-gradient(
-		330deg,
-		var(--purple) 0%,
-		hsla(23, 64%, 75%, 1) 100%
-	);
+	background: linear-gradient(330deg, var(--purple) 0%, var(--beige) 100%);
 
-	background: -moz-linear-gradient(
-		330deg,
-		var(--purple) 0%,
-		hsla(23, 64%, 75%, 1) 100%
-	);
+	background: -moz-linear-gradient(330deg, var(--purple) 0%, var(--beige) 100%);
 
 	background: -webkit-linear-gradient(
 		330deg,
 		var(--purple) 0%,
-		hsla(23, 64%, 75%, 1) 100%
+		var(--beige) 100%
 	);
 }
 
@@ -482,10 +475,13 @@ main > div {
 
 #contact {
 	width: 100%;
+	max-width: 600px;
+	margin: auto;
 	padding: 1rem;
 
 	form {
 		fieldset {
+			border: 1px solid rgb(111, 111, 111);
 			padding: 1rem;
 			display: flex;
 			gap: 1rem;
@@ -500,14 +496,34 @@ main > div {
 					width: 100%;
 					border-radius: var(--border-sm);
 					background-color: whitesmoke;
+					transition: all 300ms ease-out;
+				}
+				*:focus-visible {
+					outline: none;
+					box-shadow: 0 0 0 3px var(--purple);
+					outline: none;
+					background-color: floralwhite;
 				}
 			}
 		}
 	}
 }
 
+legend {
+	margin: auto;
+	padding-inline: 12px;
+	margin-bottom: 10px;
+}
+
 button {
 	padding: 12px;
 	border: 1px solid black;
 	border-radius: var(--border-sm);
+	transition: all 300ms ease-in-out;
+}
+
+button:hover {
+	background-color: rgb(233, 233, 233);
+	box-shadow: 0 0 0 3px white;
+	transform: scale(1.02);
 }
